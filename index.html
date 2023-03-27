@@ -77,9 +77,14 @@
                     <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusantium, vel!</p>
                     <a href="#pricing" class="btn btn-secondary btn-larage">Buy Now</a>
+                    <a href="#sidebar" class="btn btn-secondary btn-larage" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">Explore my other books</a>
                 </div>
                 <div class="col-md-5 txet-center">
-                    <img class="img-fluid d-none d-md-block" src="ebook-cover.png" alt="ebook cover">
+                    <!-- tooltip --> 
+                    <span class="tt" data-bs-placement="bottom" title="Net Ninja Book Cover">
+                        <img class="img-fluid d-none d-md-block" src="ebook-cover.png" alt="ebook cover">
+                    </span>
+
                 </div>
             </div>
         </div>
@@ -312,7 +317,11 @@
                                 <i class="bi bi-star-fill"></i>
                             </div>
                             <h5 class="mb-1">A must buy for every aspiring web developer</h5>
-                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae unde quod provident consequuntur eos dolorem explicabo illo vero a ratione, nobis blanditiis modi sapiente perferendis nulla voluptatem dolor atque voluptate eligendi non amet culpa? Expedita sapiente quo laborum? Modi consectetur assumenda fugit ea cum aperiam minima maxime neque velit id.</p>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae unde
+                                quod provident consequuntur eos dolorem explicabo illo vero a ratione, nobis blanditiis
+                                modi sapiente perferendis nulla voluptatem dolor atque voluptate eligendi non amet
+                                culpa? Expedita sapiente quo laborum? Modi consectetur assumenda fugit ea cum aperiam
+                                minima maxime neque velit id.</p>
                             <small>Review by Mario</small>
                         </div>
 
@@ -325,7 +334,11 @@
                                 <i class="bi bi-star"></i>
                             </div>
                             <h5 class="mb-1">You need to check this out right now!</h5>
-                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae unde quod provident consequuntur eos dolorem explicabo illo vero a ratione, nobis blanditiis modi sapiente perferendis nulla voluptatem dolor atque voluptate eligendi non amet culpa? Expedita sapiente quo laborum? Modi consectetur assumenda fugit ea cum aperiam minima maxime neque velit id.</p>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae unde
+                                quod provident consequuntur eos dolorem explicabo illo vero a ratione, nobis blanditiis
+                                modi sapiente perferendis nulla voluptatem dolor atque voluptate eligendi non amet
+                                culpa? Expedita sapiente quo laborum? Modi consectetur assumenda fugit ea cum aperiam
+                                minima maxime neque velit id.</p>
                             <small>Review by Luigi</small>
                         </div>
 
@@ -338,7 +351,11 @@
                                 <i class="bi bi-star-half"></i>
                             </div>
                             <h5 class="mb-1">You do not want to miss this gem</h5>
-                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae unde quod provident consequuntur eos dolorem explicabo illo vero a ratione, nobis blanditiis modi sapiente perferendis nulla voluptatem dolor atque voluptate eligendi non amet culpa? Expedita sapiente quo laborum? Modi consectetur assumenda fugit ea cum aperiam minima maxime neque velit id.</p>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae unde
+                                quod provident consequuntur eos dolorem explicabo illo vero a ratione, nobis blanditiis
+                                modi sapiente perferendis nulla voluptatem dolor atque voluptate eligendi non amet
+                                culpa? Expedita sapiente quo laborum? Modi consectetur assumenda fugit ea cum aperiam
+                                minima maxime neque velit id.</p>
                             <small>Review by Princess</small>
                         </div>
                     </div>
@@ -361,17 +378,31 @@
                     <form>
                         <label for="email" class="form-label">Email Adress :</label>
                         <div class="mb-4 input-group">
+                            <span class="input-group-text" id="basic-addon2">
+                                <i class="bi bi-envelope-fill"></i>
+                            </span>
                             <input type="email" class="form-control" id="email" placeholder="e.g. mario@email.com" />
-                            <span class="input-group-text" id="basic-addon2">@example.com</span>
+                            <span class = "input-group-text">
+                                <span class="tt" data-bs-placement="bottom" title="enter an email we can reply to">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
 
-                        <div class="input-group mb-4">
-                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                            <input type="text" class="form-control" id = "name" placeholder="e.g. mario">
-                        </div>
                         <label for="name" class="form-label">Name : </label>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+                            <input type="text" class="form-control" id="name" placeholder="e.g. mario">
+                            <span class = "input-group-text">
+                                <span class="tt" data-bs-placement="bottom" title="pretty self explanatory, innit">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
+                        </div>
 
-                        <label for="subject" class = "form-label">What is your question?</label>
+                        <label for="subject" class="form-label">What is your question?</label>
                         <div class="input-group mb-4">
                             <span class="input-group-text"><i class="bi bi-chat-left-fill"></i></span>
                             <select class="form-select" id="subject">
@@ -397,6 +428,72 @@
         </div>
 
     </section>
+    
+    <!-- get updates / modal trigger -->
+    <section class="bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>Stay in the Loop</h2>
+                <p class="lead">Get the latest updates as they happen...</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <p class="text-muted my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vero suscipit recusandae perferendis laboriosam, sint vel aliquid laudantium repudiandae! Dolor aspernatur assumenda veniam maxime nemo repellendus ipsam excepturi. Sapiente iure laborum enim labore sed aperiam dolorem doloribus modi temporibus cupiditate.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
+                        Register for updates
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal itself -->
+    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true"> 
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Get the latest Updates</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque reprehenderit autem aliquid laudantium, blanditiis a, eaque itaque ad voluptatem illo officiis, corporis fuga? Optio molestias sint adipisci quidem dolores reprehenderit expedita omnis officiis, consequatur, quas architecto asperiores possimus, labore id.</p>
+                    <label for="modal-email" class="form-label">Your email adress</label>
+                    <input type="email" class="form control" id="modal-email" placeholder="e.g. mario@example.com">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebar-label">My Other Books</h5>
+        </div>
+        <div class="offcanvas-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium cupiditate reprehenderit temporibus amet rem deleniti? Sed ullam nobis reiciendis. Repellat totam nam perspiciatis quibusdam excepturi recusandae, consequatur dolores error commodi sequi accusantium ut praesentium at ab, quis, iste vel suscipit?</p>
+            <!-- dropdown -->
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown">
+                    Choose a book title
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+                    <li><a href="#" class="dropdown-item">Become a React Superhero</a></li>
+                    <li><a href="#" class="dropdown-item">Conquering Vue.js</a></li>
+                    <li><a href="#" class="dropdown-item">Leveling up your Next.js</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tooltips = document.querySelectorAll('.tt');
+        tooltips.forEach(t => {
+            new bootstrap.Tooltip(t);
+        });
+    </script>
 
 </body>
 
